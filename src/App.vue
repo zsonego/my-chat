@@ -1,10 +1,31 @@
 <template>
-  <div id="app">App</div>
+  <div id="app">
+    <TabBar></TabBar>
+    <router-view></router-view>
+  </div>
 </template>
 
+<script>
+import TabBar from './components/TabBar';
+export default {
+  components: {
+    TabBar,
+  },
+};
+</script>
+
 <style lang="less">
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #app {
-  font-size: large;
-  color: #12bd50;
+  height: 500px;
+  width: 800px;
+  border-radius: 10px;
+  display: flex;
 }
 </style>
